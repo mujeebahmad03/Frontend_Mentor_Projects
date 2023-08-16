@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(0, 0%, 81%);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-con {
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card {
+    border-radius: 5px;
+    padding: 1.5rem;
+    color: hsl(0, 0%, 81%);
+}
+
+.dp {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dp img {
+    display: block;
+    width: 2rem;
+    border-radius: 50%;
+}
+
+.card h3 {
+    margin: 1rem 0;
+}
+
+.card h4>span {
+    opacity: 50%;
+}
+
+.card p {
+    opacity: 70%;
+}
+
+.daniel {
+    background: url(./images/bg-pattern-quotation.svg) no-repeat;
+    background-position: right 2rem top 0;
+    background-color: hsl(263, 55%, 52%);
+}
+
+.jona {
+    background-color: hsl(217, 19%, 35%);
+}
+
+.jean {
+    background-color: white;
+    color: hsl(217, 19%, 35%);
+}
+
+.pat {
+    background-color: hsl(219, 29%, 14%);
+}
+
+.kira {
+    background-color: hsl(210, 46%, 95%);
+    color: hsl(217, 19%, 35%);
+}
+
+@media only screen and (min-width: 600px) {
+    .main-con {
+        width: 90%;
+        display: grid;
+        /* grid-template: 'daniel daniel jona kira' 'jean pat pat kira'; */
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .daniel {
+        /* grid-area: daniel; */
+        grid-area: 1/1/2/3;
+    }
+    .jona {
+        /* grid-area: jona; */
+        grid-area: 1/3/2/4;
+    }
+    .jean {
+        /* grid-area: jean; */
+        grid-area: 2/1/3/2;
+    }
+    .pat {
+        /* grid-area: pat; */
+        grid-area: 2/2/3/4;
+    }
+    .kira {
+        /* grid-area: kira; */
+        grid-area: 1/4/3/5;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .main-con {
+        width: 80%;
+    }
+}

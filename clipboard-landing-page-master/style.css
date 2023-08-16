@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,600;1,400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 18px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header,
+section,
+footer {
+    padding: 2rem;
+}
+
+header {
+    background: url(./images/bg-header-mobile.png) no-repeat;
+    background-size: cover;
+}
+
+header h1 {
+    margin: 2rem 0;
+}
+
+h1,
+h2,
+h4 {
+    color: hsl(210, 10%, 33%);
+}
+
+p {
+    color: hsl(201, 11%, 66%);
+    font-size: 0.8rem;
+}
+
+.btn-grp {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn {
+    border: none;
+    min-width: 100px;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 30px;
+}
+
+.btn,
+.other-links a,
+.sm-logos img {
+    cursor: pointer;
+}
+
+.ios {
+    background-color: #26baa4;
+    color: white;
+    box-shadow: -4px 10px 13px -3px rgba(38, 186, 164, 0.39);
+}
+
+.ios:hover {
+    background-color: rgba(38, 186, 164, 0.35);
+}
+
+.mac {
+    background-color: #6173ff;
+    color: white;
+    box-shadow: -4px 10px 13px -3px rgba(97, 115, 255, 1);
+}
+
+.mac:hover {
+    background-color: rgba(97, 115, 255, 0.5);
+}
+
+.second p {
+    margin: 1rem 0;
+}
+
+.third {
+    margin: 3rem 0 5rem 0;
+}
+
+.third img,
+.fourth img {
+    width: 100%;
+}
+
+.content {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.fourth h2 {
+    margin-bottom: 1rem;
+}
+
+.fourth img {
+    margin: 3rem 0;
+}
+
+.fifth h2 {
+    margin-bottom: 1rem;
+}
+
+.fifth>div>p {
+    margin-bottom: 4rem;
+}
+
+.sm-con {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sm-con h4 {
+    margin: 2rem 0;
+}
+
+.sixth {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 5rem 0;
+}
+
+.seventh p {
+    margin: 1rem 0 2rem 0;
+}
+
+footer {
+    background-color: hsla(201, 11%, 66%, 0.1);
+}
+
+.foot div:first-child>img {
+    width: 3rem;
+}
+
+.foot {
+    display: grid;
+    gap: 2rem;
+}
+
+.other-links p {
+    margin-bottom: 2rem;
+}
+
+.other-links a {
+    text-decoration: none;
+    color: hsl(201, 11%, 66%);
+    font-size: 1rem;
+}
+
+.other-links a:hover {
+    color: rgba(38, 186, 164, 0.39);
+}
+
+.sm-logos img {
+    margin: 1rem;
+}
+
+.sm-logos img:hover {
+    color: rgba(38, 186, 164, 0.39);
+}
+
+@media only screen and (width>480px) {
+    header,
+    section,
+    footer {
+        padding: 4rem;
+    }
+}
+
+@media only screen and (width>600px) {
+    section {
+        padding: 3rem 0;
+        width: 80%;
+        margin: auto;
+    }
+    header {
+        background: url(./images/bg-header-desktop.png) no-repeat;
+    }
+    .btn-grp,
+    .sm-con,
+    .sixth {
+        flex-direction: row;
+    }
+    .btn-grp {
+        width: 60%;
+        margin: 2rem auto;
+    }
+    .third {
+        width: 90%;
+        margin: 0 0 10rem 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .third img{
+        margin-left: -1rem;
+    }
+    .content {
+        text-align: start;
+    }
+    .sixth {
+        gap: 2rem;
+        margin: auto;
+        justify-content: center;
+    }
+    .sixth img {
+        display: block;
+        width: 80%;
+    }
+    footer {
+        padding: 2rem 0;
+    }
+    .foot {
+        width: 80%;
+        grid-template-columns: max-content 1fr max-content;
+        gap: 2rem;
+        margin: auto;
+    }
+
+    .other-links {
+        width: 80%;
+        height: 10rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .other-links p {
+        margin-bottom: 1rem;
+    }
+    .sm-logos {
+        margin-left: auto;
+    }
+    .sm-logos img {
+        margin: 0.5rem;
+    }
+}
+
+@media only screen and (width>750px) {
+    .other-links {
+        height: 6rem;
+    }
+}

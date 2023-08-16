@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    background: url(./images/bg-mobile.png) no-repeat;
+    background-color: hsl(229, 57%, 11%);
+    background-size: cover;
+    color: hsl(243, 100%, 93%);
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.con {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 8rem auto;
+}
+
+.file,
+.usage {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(228, 56%, 26%);
+    padding: 2rem;
+}
+
+.icon {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.icons {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    width: 3rem;
+    height: 3rem;
+    padding: .8rem;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 7px;
+}
+
+.icons>img {
+    width: 100%;
+}
+
+.file {
+    border-radius: 10px 5rem 10px 10px;
+}
+
+.usage {
+    position: relative;
+    border-radius: 10px;
+}
+
+.meter-gauge {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 1.6rem;
+    background-color: hsl(229, 57%, 11%);
+    margin-top: 1.4rem;
+    border-radius: 2rem;
+    box-shadow: 0 5px 5px -5px #333 inset;
+}
+
+.meter-gauge span {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 81.5%;
+    height: 1.1rem;
+    box-shadow: 0 5px 5px -5px #999 inset;
+    min-width: 1.1rem;
+    margin: 0 0.3rem 0 0.3rem;
+    background: linear-gradient(90deg, hsl(6, 100%, 80%) 12%, hsl(335, 100%, 65%) 87%);
+    border-radius: 2rem;
+    transition: width 350ms linear;
+}
+
+.meter-gauge span::before {
+    content: "";
+    position: absolute;
+    width: 0.75rem;
+    height: 0.75rem;
+    right: 0.17rem;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.min_max {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.content-left-gb {
+    position: absolute;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5rem;
+    bottom: -40%;
+    align-items: center;
+    background-color: #fff;
+    color: #848794;
+    font-weight: 700;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+}
+
+.content-left-gb span {
+    color: #000;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+@media only screen and (max-width:550px) {
+    .usage p {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width:550px) {
+    body {
+        background: url(./images/bg-desktop.png) no-repeat;
+        background-color: hsl(229, 57%, 11%);
+        background-position: bottom;
+        background-size: 105% 63%;
+    }
+    .con {
+        flex-direction: row;
+        align-items: flex-end;
+        margin: 15rem auto;
+    }
+    .file,
+    .usage {
+        width: 50%;
+    }
+    .content-left-gb {
+        bottom: -30%;
+        padding: .5rem;
+    }
+}
+
+@media only screen and (min-width:600px) {
+    .file {
+        width: 40%;
+    }
+    .usage {
+        width: 100%;
+    }
+    .content-left-gb {
+        align-self: flex-end;
+        bottom: 80%;
+        padding: 1rem;
+    }
+    .content-left-gb span {
+        font-size: 2rem;
+    }
+    .content-left-gb::after {
+        content: " ";
+        position: absolute;
+        right: 0;
+        bottom: -2rem;
+        border: 2rem solid #fff;
+        border-top-color: rgba(0, 0, 0, 0);
+        border-bottom-color: rgba(0, 0, 0, 0);
+        border-left-color: rgba(0, 0, 0, 0);
+    }
+}

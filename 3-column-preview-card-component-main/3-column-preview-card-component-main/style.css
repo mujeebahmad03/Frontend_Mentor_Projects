@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    min-height: 50vh;
+}
+
+.card {
+    padding: 30px;
+    width: 100%;
+    color: hsla(0, 0%, 100%, 0.75);
+    height: 100%;
+}
+
+.card img {
+    display: block;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.card h1 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.card p {
+    margin-bottom: 30px;
+    line-height: 20px;
+    font-size: 0.8rem;
+}
+
+.card .btn {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.sedan {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 5px 0 0 5px;
+}
+
+.sedan .btn {
+    color: hsl(31, 77%, 52%);
+}
+
+.sedan .btn:hover {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.suv {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.suv .btn {
+    color: hsl(184, 100%, 22%);
+}
+
+.suv .btn:hover {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 5px 5px 0;
+}
+
+.luxury .btn {
+    color: hsl(179, 100%, 13%);
+}
+
+.luxury .btn:hover {
+    background-color: hsl(179, 100%, 13%);
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: hsl(0, 0%, 95%);
+    border: 1px solid hsl(0, 0%, 95%);
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        width: 70%;
+    }
+    .card {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 685px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .container {
+        width: 50%;
+        margin: 40px auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .sedan {
+        border-radius: 5px 5px 0 0;
+    }
+    .luxury {
+        border-radius: 0 0 5px 5px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .container {
+        width: 70%;
+    }
+}
